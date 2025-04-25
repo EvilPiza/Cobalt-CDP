@@ -154,17 +154,9 @@ publishing {
                 name.set("CobaltCDP")
                 description.set("Standalone functionality extracted from a Minecraft mod.")
                 url.set("https://github.com/evilpiza/cobalt-cdp")
-                licenses {
-                    license {
-                        name.set("MIT License")
-                        url.set("https://opensource.org/licenses/MIT")
-                    }
-                }
                 developers {
                     developer {
                         id.set("evilpiza")
-                        name.set("evilpiza")
-                        email.set("your@email.com")
                     }
                 }
                 scm {
