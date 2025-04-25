@@ -8,7 +8,7 @@ plugins {
     id("com.github.johnrengelman.shadow") version "8.1.1"
     kotlin("jvm") version "1.9.22"
     `java-library`
-    maven
+    maven-publish
 }
 
 val baseGroup: String by project
