@@ -17,5 +17,5 @@ the 'stable' ending after the colon is the lag, you can replace it with the most
 
 for silly goobers who don't know how to use this very easy library:
 ```yes
-https://github.com/EvilPiza/Cobalt-CDP-Test-Code
+https://github.com/EvilPiza/Cobalt-CDP-Example
 ```
