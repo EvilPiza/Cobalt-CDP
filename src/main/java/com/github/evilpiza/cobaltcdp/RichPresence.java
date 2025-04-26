@@ -11,7 +11,7 @@ import java.nio.file.StandardCopyOption;
 
 public class RichPresence {
     private static String APPLICATION_ID = "1364787314592714782";
-    private static String DLL_PATH = "/natives/discord_game_sdk.dll";
+    private static final String DLL_PATH = "/natives/discord_game_sdk.dll";
     
     private DiscordRPC lib;
     private DiscordRichPresence presence;
@@ -71,9 +71,4 @@ public class RichPresence {
     public void SetDiscordAppID(String id) {
         APPLICATION_ID = id;
     }
-
-    public void SetDLLPath(String path) {
-        DLL_PATH = path;
-    }
-
 }

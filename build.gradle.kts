@@ -31,12 +31,7 @@ val shadowImpl: Configuration by configurations.creating {
 }
 
 dependencies {
-    implementation("com.github.MinnDevelopment:Java-DiscordRPC:v2.0.2") {
-        exclude(group = "club.minnced", module = "discord-rpc-release")
-    }
-    shadowImpl("com.github.MinnDevelopment:Java-DiscordRPC:v2.0.2") {
-        exclude(group = "club.minnced", module = "discord-rpc-release")
-    }
+    implementation("com.github.MinnDevelopment:Java-DiscordRPC:v2.0.2")
     implementation(kotlin("stdlib-jdk8"))
 }
 
