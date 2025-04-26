@@ -10,7 +10,7 @@ I say put this in your build.gradle.kts file:
         implementation("com.github.evilpiza:cobalt-cdp:Whatever the latest tag is")
     }
 ```
-or just use stable since it works :)
+or just use the 'stable' tag since it works :)
 
 for silly goobers who don't know how to use this very easy library:
 ```yes
