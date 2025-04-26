@@ -145,23 +145,20 @@ tasks.assemble.get().dependsOn(tasks.remapJar)
 publishing {
     publications {
         create<MavenPublication>("mavenJava") {
-            // Publish the remapped JAR (main artifact)
             artifact(tasks.remapJar) {
                 builtBy(tasks.remapJar)
             }
             
-            // Optionally publish sources JAR
             artifact(tasks.remapSourcesJar) {
                 builtBy(tasks.remapSourcesJar)
                 classifier = "sources"
             }
 
-            groupId = "com.github.evilpiza"  // Must match your GitHub username
+            groupId = "com.github.evilpiza"
             artifactId = modid
             version = project.version.toString()
             
             pom {
-                // ... keep your existing pom configuration ...
             }
         }
     }
