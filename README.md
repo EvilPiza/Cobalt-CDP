@@ -7,5 +7,5 @@ I say put this in your build.gradle.kts file:
         maven("https://jitpack.io")
     }
     dependencies {
-        implementation("com.github.evilpiza:cobalt-cdp:1.0.0")
+        implementation("com.github.evilpiza:cobalt-cdp:Whatever the latest tag is")
     }
