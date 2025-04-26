@@ -1,5 +1,7 @@
 ho ho ho unofficial cobalt rich presence mod
 
+the cdp stands for 'custom discord presence' btw
+
 "how use??" you might be saying rn
 I say put this in your build.gradle.kts file:
 ```idk
