@@ -58,9 +58,17 @@ tasks.shadowJar {
 publishing {
     publications {
         create<MavenPublication>("mavenJava") {
-            from(components["java"])
-            artifact(tasks["sourcesJar"])
-            artifact(tasks["javadocJar"])
+            artifact(tasks["jar"]) {
+                classifier = ""
+            }
+
+            artifact(tasks["sourcesJar"]) {
+                classifier = "sources"
+            }
+
+            artifact(tasks["javadocJar"]) {
+                classifier = "javadoc"
+            }
 
             groupId = "com.github.evilpiza"
             artifactId = modid
@@ -68,6 +76,7 @@ publishing {
 
             pom {
                 name.set(modid)
+                description.set("Your library description")
                 url.set("https://github.com/evilpiza/cobalt-cdp")
                 developers {
                     developer {
