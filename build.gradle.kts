@@ -144,26 +144,24 @@ tasks.assemble.get().dependsOn(tasks.remapJar)
 
 publishing {
     publications {
-        create<MavenPublication>("cobaltcdp") {
-            from(components["java"])
-            groupId = "com.github.evilpiza"
+        create<MavenPublication>("mavenJava") {
+            // Publish the remapped JAR (main artifact)
+            artifact(tasks.remapJar) {
+                builtBy(tasks.remapJar)
+            }
+            
+            // Optionally publish sources JAR
+            artifact(tasks.remapSourcesJar) {
+                builtBy(tasks.remapSourcesJar)
+                classifier = "sources"
+            }
+
+            groupId = "com.github.evilpiza"  // Must match your GitHub username
             artifactId = modid
             version = project.version.toString()
-
+            
             pom {
-                name.set("CobaltCDP")
-                description.set("Standalone functionality extracted from a Minecraft mod.")
-                url.set("https://github.com/evilpiza/cobalt-cdp")
-                developers {
-                    developer {
-                        id.set("evilpiza")
-                    }
-                }
-                scm {
-                    connection.set("scm:git:git://github.com/evilpiza/cobalt-cdp.git")
-                    developerConnection.set("scm:git:ssh://github.com:evilpiza/cobalt-cdp.git")
-                    url.set("https://github.com/evilpiza/cobalt-cdp")
-                }
+                // ... keep your existing pom configuration ...
             }
         }
     }
