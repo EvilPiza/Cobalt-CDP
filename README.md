@@ -19,3 +19,4 @@ the 'stable' ending after the colon is the lag, you can replace it with the most
 ```yes
 https://github.com/EvilPiza/Cobalt-CDP-Example
 ```
+btw btw since cobalt is a forge 1.8.9 mc mod the example is a template for a forge 1.8.9 mod with cobalt-cdp already in
