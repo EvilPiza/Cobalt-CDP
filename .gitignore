@@ -3,4 +3,6 @@
 run/
 build/
 .gradle/
-
+gradlew.bat
+gradle/wrapper/gradle-wrapper.jar
+gradlew
