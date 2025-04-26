@@ -146,7 +146,7 @@ publishing {
     publications {
         create<MavenPublication>("cobaltcdp") {
             from(components["java"])
-            groupId = "com.evilpiza"
+            groupId = "com.github.evilpiza"
             artifactId = modid
             version = project.version.toString()
 
