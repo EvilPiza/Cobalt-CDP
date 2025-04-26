@@ -11,6 +11,7 @@ I say put this in your build.gradle.kts file:
     }
 ```
 or just use stable since it works :)
+
 for silly goobers who don't know how to use this very easy library:
 ```yes
 https://github.com/EvilPiza/Cobalt-CDP-Test-Code
