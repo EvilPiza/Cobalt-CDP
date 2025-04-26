@@ -10,7 +10,7 @@ import java.nio.file.Files;
 import java.nio.file.StandardCopyOption;
 
 public class RichPresence {
-    private static String APPLICATION_ID = "1364787314592714782";
+    private static String APPLICATION_ID = " APP ID HERE ";
     private static final String DLL_PATH = "/natives/discord_game_sdk.dll";
     
     private DiscordRPC lib;
