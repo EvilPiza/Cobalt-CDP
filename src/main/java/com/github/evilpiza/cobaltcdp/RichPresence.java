@@ -3,17 +3,12 @@ package com.github.evilpiza.cobaltcdp;
 import club.minnced.discord.rpc.DiscordEventHandlers;
 import club.minnced.discord.rpc.DiscordRPC;
 import club.minnced.discord.rpc.DiscordRichPresence;
-import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.common.Mod.EventHandler;
-import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 
 import java.io.File;
 import java.io.InputStream;
 import java.nio.file.Files;
 import java.nio.file.StandardCopyOption;
 
-@Mod(modid = "cobaltcdp", name = "Cobalt CDP", version = "1.0.0")
 public class RichPresence {
     private static String APPLICATION_ID = "1364787314592714782";
     private static String DLL_PATH = "/natives/discord_game_sdk.dll";
@@ -21,8 +16,7 @@ public class RichPresence {
     private DiscordRPC lib;
     private DiscordRichPresence presence;
 
-    @EventHandler
-    public void init(FMLInitializationEvent event) {
+    public void init() {
         try {
             // Load native library
             InputStream dllStream = getClass().getResourceAsStream(DLL_PATH);
@@ -44,8 +38,6 @@ public class RichPresence {
             presence.largeImageKey = "minecraft";
             presence.largeImageText = "Cobalt CDP";
             lib.Discord_UpdatePresence(presence);
-
-            MinecraftForge.EVENT_BUS.register(this);
 
             // Callback thread
             new Thread(() -> {
@@ -84,8 +76,4 @@ public class RichPresence {
         DLL_PATH = path;
     }
 
-    @Mod.EventHandler
-    public void onShutdown(net.minecraftforge.fml.common.event.FMLServerStoppingEvent event) {
-        lib.Discord_Shutdown();
-    }
 }
